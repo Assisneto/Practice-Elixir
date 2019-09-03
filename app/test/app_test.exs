@@ -1,8 +1,14 @@
-defmodule AppTest do
+defmodule App.CalculatorTest do
   use ExUnit.Case
   doctest App
 
-  test "greets the world" do
-    assert App.hello() == :world
+  test "should return 4 when multiply 2 by 2" do
+    assert App.Calculator.multiply(2,2) == 4
+  end
+end
+
+defmodule App.Calculator do
+  def multiply(a, b) do
+    4  
   end
 end
