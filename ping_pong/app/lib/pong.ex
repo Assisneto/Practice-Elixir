@@ -4,10 +4,10 @@ defmodule App.Pong do
     wait()
   end
 
-  def wait () do
+  def wait() do
     receive do
-      {pid,:ping} ->
-        send(pid,{self(),:pong})
+      {pid, :ping} ->
+        send(pid, {self(), :pong})
         IO.puts "Recebi um Ping"
     end
     wait()

@@ -7,7 +7,7 @@ defmodule App.Ping do
   def wait() do
     receive do
       {pid,:pong} -> send(pid,{self(), :ping})
-      IO.puts "Recebi um pong"
+      IO.puts "Recebi um Pong"
     end
   wait()
   end
